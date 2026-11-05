@@ -1,0 +1,514 @@
+/* General page styling */
+
+:root {
+    --primary: #321677;
+    --secondary: #eb5f74;
+    --accent: #ffbe55;
+    --background: #c7aa9d;
+    --dark: #252044;
+    --white: #746262;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Header styling */
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+/* Navigation styling */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+/* Main content styling */
+
+main {
+    width: 85%;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Hero section */
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    color: var(--primary);
+    font-size: 30px;
+}
+
+.hero h3 {
+    color: var(--secondary);
+    margin: 10px 0;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #172554;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #4f46e5;
+}
+
+/* About page styling */
+
+section ul {
+    padding-left: 25px;
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+section img {
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+/* About Me page improvements */
+
+section h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+section p {
+    margin-bottom: 12px;
+}
+
+section li {
+    padding: 5px;
+}
+
+section li::marker {
+    color: var(--secondary);
+}
+
+/* Projects page */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #eee5ff;
+    transition: transform 0.3s ease;
+}
+
+.project-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 20px;
+}
+
+.project-card a {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+}
+
+/* Academic Planner */
+
+.planner-input {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.planner-input input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #eee5ff;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.planner-input button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.planner-input button:hover {
+    background-color: var(--secondary);
+}
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    background-color: #fff0f3;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Completed tasks */
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+    background-color: #d1fae5 !important;
+}
+
+.delete-btn {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.delete-btn:hover {
+    background-color: #e63950;
+}
+
+/* Contact form styling */
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 12px;
+    border: 2px solid #eee5ff;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+#contactForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contactForm button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contactForm button:hover {
+    background-color: var(--secondary);
+}
+
+/* Footer styling */
+
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+}
+
+/* Academic timetable styling */
+
+.timetable {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 900px;
+}
+
+.timetable h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.timetable table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+
+.timetable th,
+.timetable td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.timetable th {
+    background-color: var(--primary);
+    color: white;
+}
+
+.timetable tr:nth-child(even) {
+    background-color: var(--background);
+}
+
+.timetable tr:hover {
+    background-color: #f0eaff;
+}
+
+/* Button hover effects */
+
+button,
+.btn {
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+/* Navigation hover effect */
+
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+/* Heading animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h2 {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Task checkbox styling */
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#taskList input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary);
+    flex-shrink: 0;
+}
+
+#taskList li span {
+    flex: 1;
+}
+
+#taskList li.completed span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Multimedia section */
+
+.media-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.media-section h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.media-section p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.media-section video {
+    width: 100%;
+    max-height: 450px;
+    border-radius: 12px;
+    background-color: var(--dark);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-preview {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 850px;
+}
+
+.project-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.project-preview {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 850px;
+}
+
+.project-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+main section {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+main section h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+main section p,
+main section li {
+    line-height: 1.8;
+}
