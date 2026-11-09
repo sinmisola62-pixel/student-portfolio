@@ -150,8 +150,8 @@ if (contactForm) {
         }
 
         // Successful validation
-        formFeedback.textContent = "Your message has been validated successfully!";
-
+        formFeedback.textContent = "All fields look good!";
+        
         formFeedback.style.color = "green";
 
         contactForm.reset();
